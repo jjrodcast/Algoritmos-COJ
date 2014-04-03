@@ -1,7 +1,7 @@
 Algoritmos
 ==========
 
-Mis soluciones de UVA, COJ
+Mis soluciones de Caribbean Online Judge.
 
 Espacio para compartir soluciones de diseño de algoritmos.
 
