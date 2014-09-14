@@ -1,28 +1,27 @@
 #include <cstdlib>
 #include <iostream>
-#include <vector>
-#define MAX 1000
+#include <stdio.h>
+#include <string.h>
+
 using namespace std;
 
-typedef long long ll;
-typedef vector<int> vi;
-
 int main()
-{   ll num;
-    while((cin>>num)&& num>=0){
-       if(!num){
-         cout<<"0"<<endl;
-         continue;
-       }
-       vi x;
-       while(num>0){
-          x.push_back(num%3);
-          num/=3;
-       }
-       for(int i=x.size()-1;i>=0;i--){
-          cout<<x[i];
+{   int g;
+    while(cin>>g && g){
+       char pal[101];
+       cin.ignore();
+       cin>>pal;
+       int n = strlen(pal);
+       int salto = strlen(pal)/g;
+       int k=salto;
+       for(int i=0;i<n;i+=salto){
+         for(int j=k-1;j>=i;j--){
+            cout<<pal[j];
+         }
+         k+=salto;
        }
        cout<<endl;
     }
-    return 0;
+    return 0;    
 }
+
